@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>北圓圈生日快樂！</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #00ffe5;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-top: 60px;
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    p.main {
+      font-size: 1.4em;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    button {
+      background-color: #111;
+      border: 2px solid #00ffe5;
+      color: #00ffe5;
+      padding: 12px 20px;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00ffe5;
+      color: #000;
+    }
+
+    .message-box {
+      margin-top: 30px;
+      padding: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #fff;
+      font-size: 1.2em;
+      background-color: #111;
+      border: 1px solid #00ffe5;
+      border-radius: 10px;
+      display: none;
+    }
+
+    footer {
+      margin-top: 80px;
+      color: #555;
+      font-size: 0.9em;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>北圓圈，生日快樂！</h1>
+  <p class="main">願你每天都像打出 <strong>四殺</strong> 一樣精彩！<br>來自我們 <strong>TPOF</strong> 戰隊的最強祝福 🎮</p>
+
+  <div class="btn-group">
+    <button onclick="showMessage('尚子')">尚子</button>
+    <button onclick="showMessage('Leo')">Leo</button>
+    <button onclick="showMessage('魔鬼z')">魔鬼z</button>
+    <button onclick="showMessage('無心')">無心</button>
+    <button onclick="showMessage('散寶')">散寶</button>
+    <button onclick="showMessage('欲蘭')">欲蘭</button>
+  </div>
+
+  <div class="message-box" id="messageBox"></div>
+
+  <footer>© 2025 TPOF 團隊</footer>
+
+  <script>
+    const messages = {
+      '尚子': '尚子的祝福語：你是我們的寶藏中路，生日快樂！',
+      'Leo': 'Leo 的祝福語：Carry 一整年，永遠 MVP！',
+      '魔鬼z': '魔鬼z 的祝福語：希望你每一場都能大魔王降臨！',
+      '無心': '無心 的祝福語：生日快樂，祝你放空也能贏！',
+      '散寶': '散寶 的祝福語：一起散發光芒！生日快樂！',
+      '欲蘭': '欲蘭 的祝福語：願你的未來和蘭花一樣美麗！'
+    };
+
+    function showMessage(name) {
+      const box = document.getElementById('messageBox');
+      box.innerText = messages[name];
+      box.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
